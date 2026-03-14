@@ -25,3 +25,7 @@ def health_check():
     """A standard production health check endpoint."""
     return {"status": "ok", "mcp_enabled": True}
 
+if __name__ == "__main__":
+    import uvicorn
+    # This creates the "http://127.0.0.1:8000" that the client is looking for
+    uvicorn.run(app, host="127.0.0.1", port=8000)
