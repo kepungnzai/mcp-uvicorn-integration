@@ -7,9 +7,9 @@ mcp = FastMCP("ProductionToolbox")
 
 # Add a sample tool
 @mcp.tool()
-def calculate_uptime(server_id: str) -> str:
-    """Calculates the uptime for a production server."""
-    return f"Server {server_id} has been active for 1,240 hours."
+def greeting_time(server_id: str) -> str:
+    """Returns a greeting hello."""
+    return f"Server hello {server_id}."
 
 # 2. Create your Production Web App (FastAPI)
 app = FastAPI(title="MCP Cloud Gateway")
